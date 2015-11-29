@@ -19,15 +19,34 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.insthub.ecmobile.ECMobileAppConst;
-import com.insthub.ecmobile.EcmobileApp;
-import com.insthub.ecmobile.protocol.ApiInterface;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.external.androidquery.callback.AjaxStatus;
+import com.external.maxwin.view.XListView;
+import com.external.viewpagerindicator.PageIndicator;
+import com.insthub.BeeFramework.fragment.BaseFragment;
+import com.insthub.BeeFramework.model.BusinessResponse;
+import com.insthub.BeeFramework.view.MyListView;
+import com.insthub.ecmobile.EcmobileApp;
+import com.insthub.ecmobile.EcmobileManager;
+import com.insthub.ecmobile.EcmobileManager.RegisterApp;
+import com.insthub.ecmobile.R;
+import com.insthub.ecmobile.activity.B1_ProductListActivity;
+import com.insthub.ecmobile.activity.B2_ProductDetailActivity;
+import com.insthub.ecmobile.activity.BannerWebActivity;
+import com.insthub.ecmobile.adapter.Bee_PageAdapter;
+import com.insthub.ecmobile.model.ConfigModel;
+import com.insthub.ecmobile.model.HomeModel;
+import com.insthub.ecmobile.model.LoginModel;
+import com.insthub.ecmobile.model.ShoppingCartModel;
+import com.insthub.ecmobile.protocol.ApiInterface;
+import com.insthub.ecmobile.protocol.FILTER;
+import com.insthub.ecmobile.protocol.PLAYER;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -46,29 +65,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.external.androidquery.callback.AjaxStatus;
-import com.external.maxwin.view.XListView;
-import com.external.viewpagerindicator.PageIndicator;
-import com.insthub.BeeFramework.fragment.BaseFragment;
-import com.insthub.BeeFramework.model.BusinessResponse;
-import com.insthub.BeeFramework.view.MyListView;
-import com.insthub.ecmobile.EcmobileManager;
-import com.insthub.ecmobile.EcmobileManager.RegisterApp;
-import com.insthub.ecmobile.R;
-import com.insthub.ecmobile.R.id;
-import com.insthub.ecmobile.activity.B1_ProductListActivity;
-import com.insthub.ecmobile.activity.B2_ProductDetailActivity;
-import com.insthub.ecmobile.activity.BannerWebActivity;
-import com.insthub.ecmobile.adapter.B0_IndexAdapter;
-import com.insthub.ecmobile.adapter.Bee_PageAdapter;
-import com.insthub.ecmobile.model.ConfigModel;
-import com.insthub.ecmobile.model.HomeModel;
-import com.insthub.ecmobile.model.LoginModel;
-import com.insthub.ecmobile.model.ShoppingCartModel;
-import com.insthub.ecmobile.protocol.FILTER;
-import com.insthub.ecmobile.protocol.PLAYER;
-import com.umeng.analytics.MobclickAgent;
 
 public class B0_IndexFragment2 extends BaseFragment
 		implements BusinessResponse, XListView.IXListViewListener, RegisterApp {
