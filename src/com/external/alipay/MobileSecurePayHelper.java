@@ -12,33 +12,27 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import android.app.Activity;
-import android.content.res.Resources;
-import android.view.View;
-import com.insthub.BeeFramework.view.MyDialog;
-import com.insthub.ecmobile.activity.AlixPayActivity;
-import com.insthub.ecmobile.activity.EcmobileMainActivity;
-import com.insthub.ecmobile.activity.PayWebActivity;
-import com.insthub.ecmobile.protocol.ORDER_INFO;
-import com.insthub.ecmobile.protocol.SESSION;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.external.alipay.FileDownloader.IDownloadProgress;
-
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.View;
+
+import com.external.alipay.FileDownloader.IDownloadProgress;
+import com.insthub.BeeFramework.view.MyDialog;
 import com.insthub.ecmobile.R;
+import com.insthub.ecmobile.protocol.ORDER_INFO;
 
 /**
  * 检测安全支付服务是否正确安装，如果没有安装进行本地安装，或者下载安装， 检测安全支付服务版本，有新版本时进行下载。

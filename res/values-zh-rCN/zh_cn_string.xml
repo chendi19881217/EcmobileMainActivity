@@ -106,7 +106,7 @@
     <string name="shopcar_add">赶紧去逛逛吧！加一些商品~</string>
     <string name="shopcarfooter_total">总计：</string>
     <string name="shopcarfooter_settleaccounts">结算</string>
-    <string name="shopcarhead_ecm">ECMobile</string>
+    <string name="shopcarhead_ecm">古丽兰珠宝</string>
     <string name="shopcaritem_done">完成</string>
     <string name="shopcaritem_modification">修改</string>
     <string name="shopcaritem_remove">移除商品</string>
@@ -192,7 +192,7 @@
     <string name="no_data">暂无数据</string>
     <string name="check_or_not">是否马上去历史订单查看？</string>
     <string name="use">兑换</string>
-    <string name="share_blog">我在ECMobile上看到一件商品，感觉不错</string>
+    <string name="share_blog">我在古丽兰珠宝上看到一件商品，感觉不错</string>
     <string name="number">数目：</string>
     <string name="crash_log_analysis">崩溃日志分析</string>
     <string name="welcome">欢迎使用</string>

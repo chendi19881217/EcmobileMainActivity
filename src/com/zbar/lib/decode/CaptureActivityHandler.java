@@ -1,12 +1,11 @@
 package com.zbar.lib.decode;
 
-import com.insthub.ecmobile.R;
-import com.insthub.ecmobile.fragment.Zxing_Fragment;
-import com.zbar.lib.CaptureActivity;
-import com.zbar.lib.camera.CameraManager;
-
 import android.os.Handler;
 import android.os.Message;
+
+import com.insthub.ecmobile.R;
+import com.insthub.ecmobile.fragment.Zxing_Fragment;
+import com.zbar.lib.camera.CameraManager;
 
 /**
  * 作者: 陈涛(1076559197@qq.com)

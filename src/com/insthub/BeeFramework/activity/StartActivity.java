@@ -86,20 +86,21 @@ public class StartActivity extends Activity {
 		shared = getSharedPreferences("userInfo", 0);
 		editor = shared.edit();
 
-		boolean isFirstRun = shared.getBoolean("isFirstRun", true);
-		if (!isFirstRun) {
-			Intent it = new Intent(this, EcmobileMainActivity.class);
-			startActivity(it);
-			finish();
-			overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
-		} else {
-
-			Intent intent = new Intent(this, GalleryImageActivity.class);
-			startActivity(intent);
-			finish();
-			overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
-
-		}
+		// boolean isFirstRun = shared.getBoolean("isFirstRun", true);
+		// if (!isFirstRun) {
+		Intent it = new Intent(this, EcmobileMainActivity.class);
+		startActivity(it);
+		finish();
+		overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+		// } else {
+		//
+		// Intent intent = new Intent(this, GalleryImageActivity.class);
+		// startActivity(intent);
+		// finish();
+		// overridePendingTransition(R.anim.push_right_in,
+		// R.anim.push_right_out);
+		//
+		// }
 
 	}
 }

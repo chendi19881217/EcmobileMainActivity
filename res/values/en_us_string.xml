@@ -105,7 +105,7 @@
     <string name="shopcar_add">Go around and buy</string>
     <string name="shopcarfooter_total">Subtotal:</string>
     <string name="shopcarfooter_settleaccounts">Check out</string>
-    <string name="shopcarhead_ecm">ECMobile</string>
+    <string name="shopcarhead_ecm">GuLiLanZhuBao</string>
     <string name="shopcaritem_done">Done</string>
     <string name="shopcaritem_modification">Modify</string>
     <string name="shopcaritem_remove">Remove product</string>
@@ -191,7 +191,7 @@
     <string name="no_data">No informations</string>
     <string name="check_or_not">Check orders right now?</string>
     <string name="use">Exchange</string>
-    <string name="share_blog">I found an incredible product on ECMobile, check it out</string>
+    <string name="share_blog">I found an incredible product on GuLiLanZhuBao, check it out</string>
     <string name="number">Amount:</string>
     <string name="crash_log_analysis">Crash log analysis</string>
     <string name="welcome">Welcome</string>

@@ -1,4 +1,5 @@
 package com.insthub.ecmobile.activity;
+
 //
 
 //                       __
@@ -82,8 +83,9 @@ public class EcmobileMainActivity extends FragmentActivity {
 			pushIntent(getIntent().getStringExtra(CUSTOM_CONTENT));
 		}
 
-		CheckVersionUtil checkVersionUtil = new CheckVersionUtil(context, handler1, APKPathEntity.apk_info_path);
-		new Thread(checkVersionUtil).start();
+		// CheckVersionUtil checkVersionUtil = new CheckVersionUtil(context,
+		// handler1, APKPathEntity.apk_info_path);
+		// new Thread(checkVersionUtil).start();
 
 	}
 
@@ -123,12 +125,14 @@ public class EcmobileMainActivity extends FragmentActivity {
 
 							e1.printStackTrace();
 						}
-						Intent it = new Intent(this, B1_ProductListActivity.class);
+						Intent it = new Intent(this,
+								B1_ProductListActivity.class);
 						it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 						FILTER filter = new FILTER();
 						filter.keywords = parameter;
 						try {
-							it.putExtra(B1_ProductListActivity.FILTER, filter.toJson().toString());
+							it.putExtra(B1_ProductListActivity.FILTER, filter
+									.toJson().toString());
 						} catch (JSONException e) {
 							e.printStackTrace();
 						}
@@ -162,7 +166,8 @@ public class EcmobileMainActivity extends FragmentActivity {
 		{
 			API_KEY = EcmobileManager.getPushKey(this);
 			PushManager.activityStarted(this);
-			PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, API_KEY);
+			PushManager.startWork(getApplicationContext(),
+					PushConstants.LOGIN_TYPE_API_KEY, API_KEY);
 		}
 	}
 
@@ -184,7 +189,8 @@ public class EcmobileMainActivity extends FragmentActivity {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			if (isExit == false) {
 				isExit = true;
-				Resources resource = (Resources) getBaseContext().getResources();
+				Resources resource = (Resources) getBaseContext()
+						.getResources();
 				String exit = resource.getString(R.string.again_exit);
 				ToastView toast = new ToastView(getApplicationContext(), exit);
 				toast.setGravity(Gravity.CENTER, 0, 0);
@@ -229,64 +235,65 @@ public class EcmobileMainActivity extends FragmentActivity {
 		}
 	}
 
-	public final int UPDATA_NONEED = 0;
-	public final int UPDATA_CAN = 1;
-	public final int UPDATA_ERR = 2;
-	public final int DOWNLOAD_ERR = 3;
+	// public final int UPDATA_NONEED = 0;
+	// public final int UPDATA_CAN = 1;
+	// public final int UPDATA_ERR = 2;
+	// public final int DOWNLOAD_ERR = 3;
 
-	AlertDialog dialog;
-	Handler handler1 = new Handler() {
-
-		@Override
-		public void handleMessage(Message msg) {
-			super.handleMessage(msg);
-			switch (msg.arg1) {
-			case UPDATA_NONEED:
-
-				Toast.makeText(context, "已是最新版，无需更新", 2000).show();
-
-				break;
-
-			case UPDATA_CAN:
-
-				String apk_url = "";
-				String des = "";
-
-				String path_des[] = msg.obj.toString().split("==");
-
-				apk_url = path_des[0];
-
-				if (path_des.length > 1) {
-
-					des = path_des[1];
-
-				}
-
-				if (des.equals("")) {
-					des = "检测到新版本，是否升级?";
-				}
-
-				dialog = GetUpdataDialog.getInstance().GetDialog(context, des, apk_url, handler);
-				dialog.show();
-
-				break;
-
-			case UPDATA_ERR:
-
-				Toast.makeText(context, "验证失败：" + msg.obj, 2000).show();
-
-				break;
-
-			case DOWNLOAD_ERR:
-
-				Toast.makeText(context, "下载失败：" + msg.obj, 2000).show();
-
-				break;
-
-			default:
-				break;
-			}
-		}
-	};
+	// AlertDialog dialog;
+	// Handler handler1 = new Handler() {
+	//
+	// @Override
+	// public void handleMessage(Message msg) {
+	// super.handleMessage(msg);
+	// switch (msg.arg1) {
+	// case UPDATA_NONEED:
+	//
+	// // Toast.makeText(context, "已是最新版，无需更新", 2000).show();
+	//
+	// break;
+	//
+	// case UPDATA_CAN:
+	//
+	// String apk_url = "";
+	// String des = "";
+	//
+	// String path_des[] = msg.obj.toString().split("==");
+	//
+	// apk_url = path_des[0];
+	//
+	// if (path_des.length > 1) {
+	//
+	// des = path_des[1];
+	//
+	// }
+	//
+	// if (des.equals("")) {
+	// des = "检测到新版本，是否升级?";
+	// }
+	//
+	// dialog = GetUpdataDialog.getInstance().GetDialog(context, des,
+	// apk_url, handler);
+	// dialog.show();
+	//
+	// break;
+	//
+	// case UPDATA_ERR:
+	//
+	// Toast.makeText(context, "验证失败：" + msg.obj, 2000).show();
+	//
+	// break;
+	//
+	// case DOWNLOAD_ERR:
+	//
+	// Toast.makeText(context, "下载失败：" + msg.obj, 2000).show();
+	//
+	// break;
+	//
+	// default:
+	// break;
+	// }
+	// }
+	// };
 
 }
